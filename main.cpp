@@ -13,19 +13,24 @@ int main()
     {
         while (window.pollEvent(event))
         {
-            if (event.type == sf::Event::Closed)
+            if (event.type == sf::Event::Closed) {
                 window.close();
+            }
             if (event.type == sf::Event::TextEntered)
             {
-                if (event.text.unicode < 128)
+               // std::cout << "Entered event\n" << std::endl;
+
+                if (event.text.unicode < 128) {
+                    std::cout << static_cast<char>(event.text.unicode) << std::endl;
+                    std::cout << static_cast<int>(event.text.unicode) << std::endl;
                     menu.updateString(static_cast<char>(event.text.unicode));
+                }
             }
 
 
         }
 
         window.clear();
-        //menu.update();
         window.draw(menu);
         window.display();
     }
