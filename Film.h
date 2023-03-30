@@ -9,4 +9,6 @@ public:
 	Film(std::string title, int releaseYear, std::string director);
 	void setDirector(std::string director);
 	std::string getDirector();
+
+	std::string toString();
 };

@@ -22,3 +22,7 @@ std::string CD::getArtist() {
 void CD::setArtist(std::string artist) {
 	this->artist = artist;
 }
+
+std::string CD::toString() {
+	return Media::toString() + " - " + this->CD;
+}

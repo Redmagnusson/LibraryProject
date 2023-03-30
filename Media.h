@@ -15,4 +15,6 @@ public:
 	int getReleaseYear();
 	void setReleaseYear(int releaseYear);
 
+	virtual std::string toString();
+
 };

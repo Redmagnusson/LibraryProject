@@ -29,3 +29,7 @@ int Media::getReleaseYear() {
 void Media::setReleaseYear(int releaseYear) {
 	this->releaseYear = releaseYear;
 }
+
+std::string Media::toString() {
+	return this->title + " - " + this->releaseYear;
+}

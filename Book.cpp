@@ -18,3 +18,6 @@ void Book::setAuthor(std::string author) {
 	this->author = author;
 }
 
+std::string Book::toString() {
+	return Media::toString() + " - " + this->author;
+}

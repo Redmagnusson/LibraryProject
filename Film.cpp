@@ -23,3 +23,7 @@ std::string Film::getDirector() {
 	return this->director;
 
 }
+
+std::string Film::toString() {
+	return Media::toString() + " - " + this->director;
+}

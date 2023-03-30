@@ -9,4 +9,5 @@ public:
 	CD(std::string title, int releaseYear, std::string artist);
 	std::string getArtist();
 	void setArtist(std::string artist);
+	std::string toString();
 };
