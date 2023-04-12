@@ -5,8 +5,8 @@ Book::Book()
 {
 
 }
-Book::Book(std::string title, int releaseYear, std::string author)
-	: Media(title, releaseYear) {
+Book::Book(std::string title, int releaseYear, std::string loanedID, std::string author)
+	: Media(title, releaseYear, loanedID) {
 			this->author = author;
 }
 
@@ -19,5 +19,6 @@ void Book::setAuthor(std::string author) {
 }
 
 std::string Book::toString() {
-	return Media::toString() + " - " + this->author;
+	return Media::getTitle() + " - " + this->author + " - " +
+		std::to_string(Media::getReleaseYear());
 }

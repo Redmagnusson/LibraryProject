@@ -6,7 +6,7 @@ private:
 
 public:
 	Film();
-	Film(std::string title, int releaseYear, std::string director);
+	Film(std::string title, int releaseYear, std::string loanedID, std::string director);
 	void setDirector(std::string director);
 	std::string getDirector();
 

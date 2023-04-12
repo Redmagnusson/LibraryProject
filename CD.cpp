@@ -7,8 +7,8 @@ CD::CD()
 
 }
 // CD constructor
-CD::CD(std::string title, int releaseYear, std::string artist)
-    : Media(title, releaseYear)
+CD::CD(std::string title, int releaseYear, std::string loanedID,  std::string artist)
+    : Media(title, releaseYear, loanedID)
 {
 	this->artist = artist;
 }
@@ -24,5 +24,6 @@ void CD::setArtist(std::string artist) {
 }
 
 std::string CD::toString() {
-	return Media::toString() + " - " + this->CD;
+	return Media::getTitle() + " - " + this->artist + " - " + 
+		std::to_string(Media::getReleaseYear());
 }

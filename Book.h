@@ -6,7 +6,7 @@ private:
 
 public:
 	Book();
-	Book(std::string title, int releaseYear, std::string author);
+	Book(std::string title, int releaseYear, std::string loanedID, std::string author);
 	std::string getAuthor();
 	void setAuthor(std::string author);
 	std::string toString();

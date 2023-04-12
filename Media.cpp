@@ -5,9 +5,10 @@ Media::Media()
 
 }
 // Constructor that sets the value when object is created
-Media::Media(std::string title, int releaseYear){
+Media::Media(std::string title, int releaseYear, std::string loanedID){
 	this->title = title;
 	this->releaseYear = releaseYear;
+	this->loanedID = loanedID;
 }
 
 // Function that returns the title
@@ -31,5 +32,5 @@ void Media::setReleaseYear(int releaseYear) {
 }
 
 std::string Media::toString() {
-	return this->title + " - " + this->releaseYear;
+	return "printing from base class: this is bad";
 }

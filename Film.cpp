@@ -7,8 +7,8 @@ Film::Film()
 }
 
 // Constructor
-Film::Film(std::string title, int releaseYear, std::string director)
-: Media(title, releaseYear)
+Film::Film(std::string title, int releaseYear, std::string loanedID, std::string director)
+: Media(title, releaseYear, loanedID)
 {
 	this->director = director;
 }
@@ -25,5 +25,6 @@ std::string Film::getDirector() {
 }
 
 std::string Film::toString() {
-	return Media::toString() + " - " + this->director;
+	return Media::getTitle() + " - " + this->director + " - " +
+		std::to_string(Media::getReleaseYear());
 }

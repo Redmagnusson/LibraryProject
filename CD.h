@@ -1,3 +1,4 @@
+#pragma once
 #include "media.h"
 
 class CD : public Media {
@@ -6,7 +7,7 @@ private:
 
 public:
 	CD();
-	CD(std::string title, int releaseYear, std::string artist);
+	CD(std::string title, int releaseYear, std::string loanedID, std::string artist);
 	std::string getArtist();
 	void setArtist(std::string artist);
 	std::string toString();
